@@ -83,3 +83,46 @@ div.absolute {
 }
 ```
 
+### flex 
+The flex property sets the flexible length on flexible items.
+
+__Note:__ If the element is not a flexible item, the flex property has no effect.
+
+flex 1 means the following :
+```
+flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%.
+```
+
+### justify-content : space-between
+The flex items are placed with even spacing where the item is pushed to start and the last item is pushed to end.
+The "justify-content: space-between;" displays the flex items with space between the lines:
+
+### flex-basis
+The flex-basis property in CSS is used to specify the initial size of the flexible item. The flex property is not used if the element is not flexible item.
+
+__Syntax:__
+```
+flex-basis: number|auto|initial|inherit;
+```
+
+- number: It is a length unit that define the initial length of that item.
+- auto: It is the default value, if the length is not specified the length will be according to it’s content.
+- initial: It sets the property to it’s default value.
+- inherit: It specifies that a property should inherit its value from its parent element.
+
+## z-index
+The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+![Example](images/z-index-ss1.png "Example")
+
+## box-sizing
+
+The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.
+![example](images/box-sizing-ss1.png)
+

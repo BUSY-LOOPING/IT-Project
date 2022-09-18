@@ -1,0 +1,68 @@
+.secondSection {
+    width: 100%;
+    height: 100%;
+    background:var(--bg1);
+    z-index: 1; 
+}
+
+.secondSectionWrapper {
+    display: flex;
+    box-sizing: border-box;
+    padding: 7% 150px 0px;
+
+    /* align-items: center; a   ligns vertically */
+    justify-content:space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.genContainer {
+    display:block;
+    flex-basis: 31%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background : white;
+    transition: 0.3s;
+
+}
+
+.genContainer h1 {
+    padding: 5px 0px;
+    font-size: 0.5rem;
+    text-align: center;
+    font-weight:500;
+    width: 100%;
+    color: white;
+    background: #273e47;
+}
+
+.aContainer{
+
+    padding: var(--aContainerPadding);
+    display:block;
+    /* border-bottom:1px solid black; */
+}
+
+.genContainer a {
+    display:inline-block;
+    font-weight:400;
+    font-size: 0.3rem;
+    text-decoration: none;
+    color: #273e47;
+}
+
+.genContainer :not(a, :last-child, :first-child)::after {
+    display:block;
+    position:relative;
+    content: "";
+    width: 100%;
+    top:var(--aContainerPadding-Top);
+    height:1px;
+    background: #ddd;
+}
+
+.secondSection :not(a, .aContainer, h1, .secondSectionWrapper):hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
