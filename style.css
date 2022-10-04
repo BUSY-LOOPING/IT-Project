@@ -133,6 +133,7 @@ Compared to display: block, the major difference is that display: inline-block d
 }
 
 .hero-btn {
+    z-index: 2;
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -145,7 +146,7 @@ Compared to display: block, the major difference is that display: inline-block d
     transition: 0.5s;
 }
 
-.hero-btn:hover {
+a.hero-btn:hover {
     background: #f44336;
     border: 1px solid #f44336;
 }
@@ -211,7 +212,7 @@ nav img {
     text-align: center;
     height: fit-content;
     margin: auto;
-    padding: 100px 20px 0px 20px;
+    padding: 100px 10% 0px 10%;
     box-sizing: border-box;
 }
 
@@ -264,9 +265,9 @@ nav img {
 
 /* --- infrastructure --- */
 .infrastructure {
+    padding:50px 10%;
     width: 100%;
     box-sizing: border-box;
-    padding: 50px 20px 0px 20px;
     background: white;
 }
 
@@ -281,6 +282,8 @@ nav img {
 }
 
 .grid {
+    
+    margin: 100px 0px;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 150px;
@@ -361,5 +364,88 @@ nav img {
     .grid {
         grid-template-columns: repeat(3, 1fr);
         /* this will gibe us 3 grid template column layout */
+    }
+}
+
+
+
+
+/* ----Principal Desk Section--- */
+
+.principal-desk {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 10% 0px 10%;
+    background: white;
+}
+
+.message-container {
+    display: flex;
+    margin:50px 0;
+    padding:8%;
+    background: var(--bg1);
+    border-radius: 10px;
+}
+
+.quote{
+    color: rgb(123, 123, 123);
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.quote_from{    
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.quote_from::before{
+    content: "- ";
+}
+
+.msg_body{
+    margin: 50px 0 0 0;
+    color: rgb(99, 86, 86);
+    text-align: left;
+    font-size:17px;
+    font-weight: 400;
+}
+
+.gen_img{
+    border-radius: 50%;
+}
+
+.message-container > img{
+    height:200px;
+    width: auto;
+}
+
+.message-container-msg{
+    padding:0 10%;
+}
+
+#princi_name{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .message-container{
+        flex-direction: column;
+    }
+
+    .message-container > img{
+        position:relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height:auto;
+        width: clamp(150px,50%, 200px);
+    }
+
+    .message-container-msg{
+        margin-top: 30px;
     }
 }
